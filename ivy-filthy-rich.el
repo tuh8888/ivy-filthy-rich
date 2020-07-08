@@ -372,7 +372,7 @@ cannnnnnnnnnnnnnd             part2"
         ;; give the space of the element right after candidate to candidate
         (setq candidate-planned-length
               (+ candidate-planned-length
-                 (length (nth index-after-candidate seq))))
+                 (max 1 (length (nth index-after-candidate seq)))))
         (ivy-filthy-rich--delete-nth index-after-candidate seq))
     ;; 2. concat everything together
     ;; 2.1 pad candidate to have length of candidate-planned-length
